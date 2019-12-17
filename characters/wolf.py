@@ -1,8 +1,8 @@
 from .character import Character
 
 class Wolf(Character) :
-    
-    def __init__(self, name) :
+    """this class inherit from Character we define his attributes  """
+    def __init__(self, name = False) :
         """ """
         super().__init__(400,40,70,20)
     
