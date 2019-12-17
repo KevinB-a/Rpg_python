@@ -5,6 +5,7 @@ class Character:
         self.attack = attack
         self.defense = defense
         self.agility = agility
+mahyadine
         self.name = None
 
 
@@ -19,3 +20,6 @@ class Character:
     def chekName ():
         
     
+
+        self.name = None
+
