@@ -5,21 +5,19 @@ class Character:
         self.attack = attack
         self.defense = defense
         self.agility = agility
-mahyadine
         self.name = None
 
 
-    def name ():
+    def choose_class(self):
         print ("Voici les nom des personnages que vous pouvez incarner Le Magicien, L'archer ou le Guerrier")
-        userName = imput(" Veuillez choisir le type de personnage que vous souhaiter incarner ")
-        while checkName (userName)is False:
+        self.choice_class = ""
+        while self.choice_class not in ["warrior", "magician", "archer"]:
             print (" Veuillez entrer les bon elements")
-            userName = imput(" Veuillez choisir le type de personnage que vous souhaiter incarner ")
-        retur userName
+            self.choice_class = imput(" Veuillez choisir le type de personnage que vous souhaiter incarner :")
+        return self.choice_class
 
-    def chekName ():
-        
-    
-
-        self.name = None
+    def name(self):
+        while self.name == None :
+            self.name = input("veuillez entrez votre nom ou pseudo :")
+        return self.name
 
