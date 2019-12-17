@@ -1,9 +1,10 @@
 class Magician:
 #mana = 200
-    def __init__(self, name):
+    def __init__(self, name = False):
         super().__init__(600,20,50,25)
     
-    def heal(self)    
+    def healing(self):
+           
 
 
 
