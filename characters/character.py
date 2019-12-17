@@ -48,18 +48,33 @@ class Character:
         os.system('cls' if os.name =='nt' else 'clear')
 
     def dodge(self):
+        """methods to dodge in function of agility player """
         if self.agility == 5 or self.agility == 10:
             n = randint (1, 100)
             if n == 1:
                 self.attack = 0
+        
         if self.agility == 20 or self.agility == 25:
             n = randint (1, 100)
             if 1 <= n <= 2:
                 self.attack = 0
-        if self.agility == 40 or self.agility == 50:
+        
+        if self.agility == 40 :
+            n = randint (1, 100)
+            if 1 <= n <= 4:
+                self.attack = 0
+        
+        if  self.agility == 50:
             n = randint (1, 100)
             if 1 <= n <= 5:
                 self.attack = 0
 
-    
+    def __repr__(self):
+        """method to show employee informations"""
+        text=" {}'s informations \n\
+        health : {} \n\
+        attack : {} \n\
+        defense : {} \n\
+        agility : {} \n"
+        print(text.format(self.name, self.health, self.attack, self.defense, self.agility))
     
