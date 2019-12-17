@@ -17,7 +17,25 @@ class Character:
         return self.choice_class
 
     def name(self):
+        """method to """ 
         while self.name == None :
             self.name = input("veuillez entrez votre nom ou pseudo :")
         return self.name
 
+    def attacking(self):
+        """method to  """
+        if self.defense > self.attack :
+            self.defense -= self.attack
+        return self.defense
+
+      #  if self.defense < self.attack and self.defense > 0 :
+
+        
+        if self.defense == 0 :
+            self.health -= self.attack
+        return self.health 
+    
+    def clear(self):
+        """method to clear the terminal"""
+        os.system('cls' if os.name =='nt' else 'clear')
+    
