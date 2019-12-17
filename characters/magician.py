@@ -1,3 +1,3 @@
 class Magician:
 
-    def magician()
+    

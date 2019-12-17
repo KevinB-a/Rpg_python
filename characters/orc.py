@@ -1,5 +1,6 @@
+from .characters import Character
 class Orc(Character):
     
-    def __init__(self,400,40,70,20,name)
+    def __init__(self, name)
         """ """ 
-        super().__init__(health,attack,defense,agility,name)
+        super().__init__(400,40,70,20)
