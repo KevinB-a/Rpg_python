@@ -1,5 +1,7 @@
 import os 
 
+from random import randint
+
 class Character:
     
     def __init__(self, health, attack, defense, agility, name):
@@ -44,6 +46,20 @@ class Character:
     def clear(self):
         """method to clear the terminal"""
         os.system('cls' if os.name =='nt' else 'clear')
-        
+
+    def dodge(self):
+        if self.agility == 5 or self.agility == 10:
+            n = randint (1, 100)
+            if n == 1:
+                self.attack = 0
+        if self.agility == 20 or self.agility == 25:
+            n = randint (1, 100)
+            if 1 <= n <= 2:
+                self.attack = 0
+        if self.agility == 40 or self.agility == 50:
+            n = randint (1, 100)
+            if 1 <= n <= 5:
+                self.attack = 0
+
     
     
