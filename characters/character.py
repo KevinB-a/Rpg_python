@@ -1,3 +1,5 @@
+from random import randint
+
 class Character:
     
     def __init__(self, health, attack, defense, agility, name):
@@ -18,6 +20,7 @@ class Character:
 
     def name(self):
         """method to """ 
+        self.name = None
         while self.name == None :
             self.name = input("veuillez entrez votre nom ou pseudo :")
         return self.name
@@ -38,4 +41,10 @@ class Character:
     def clear(self):
         """method to clear the terminal"""
         os.system('cls' if os.name =='nt' else 'clear')
+
+    def dodge(self):
+        if self.agility == 5 or self.agility == 10:
+            n = randint (1, 100)
+            if n == 1:
+                self.attack = 0
     
