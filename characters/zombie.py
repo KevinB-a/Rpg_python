@@ -1,5 +1,7 @@
+from .characters import Character
+
 class Zombie(Character) :
     
-    def __init__(self,600,15,15,5,name)
+    def __init__(self, name)
         """ """ 
-        super().__init__(health,attack,defense,agility,name)
+        super().__init__(600,15,15,5,)
