@@ -17,4 +17,6 @@ class Magician:
             self.health == self.health
             return self.health
 
+        if Magician.mana < 50 :
+            print("votre mana est trop basse pour utiliser le sort de soin")
 

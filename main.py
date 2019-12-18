@@ -12,4 +12,5 @@ if __name__ == "__main__":
     character.choose_class()
     character.player_name()
     character.__repr__()
+    
 
