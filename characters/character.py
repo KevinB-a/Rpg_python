@@ -11,11 +11,11 @@ class Character:
         self.defense = defense
         self.agility = agility
         self.name = None
-
+        self.computer_choose = None
 
     def choose_class(self):
         """method to ask the user his class he wants play """
-        print ("Voici les nom des personnages que vous pouvez incarner Le Magicien, L'archer ou le Guerrier")
+        print ("Voici les nom des personnages que vous pouvez incarner warrior, archer ou magician")
         self.choice_class = ""
         while self.choice_class not in ["warrior", "magician", "archer"]:
             print (" Veuillez entrer les bon elements")
@@ -98,5 +98,10 @@ class Character:
             
         else :
             print("votre adversaire vous a rattrappé le combat continue")
+
+    def choose_enemy(self):
+        self.computer_choose = ["wolf", "zombie", "orc"]
+        return self.computer_choose[randint(self.computer_choose)]
+
             
          
