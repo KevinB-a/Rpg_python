@@ -2,7 +2,7 @@ from .character import Character
 
 class Archer(Character) :
     """ """
-    def __init__(self,350,30,80,50,name)
+    def __init__(self, name):
         """ """ 
-        super().__init__(health,attack,defense,agility,name)
+        super().__init__(350,30,80,50,None)
     

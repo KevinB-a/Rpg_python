@@ -5,6 +5,7 @@ from random import randint
 class Character:
     
     def __init__(self, health, attack, defense, agility, name):
+        """arguments for initialize the Character class  """
         self.health = health
         self.attack = attack
         self.defense = defense
@@ -49,14 +50,24 @@ class Character:
 
     def dodge(self):
         """methods to dodge in function of agility player """
-        if self.agility == 5 or self.agility == 10:
+        if self.agility == 5 :
+            n = randint (1, 200)
+            if n == 1:
+                self.attack = 0
+        
+        if self.agility == 10:
             n = randint (1, 100)
             if n == 1:
                 self.attack = 0
         
-        if self.agility == 20 or self.agility == 25:
+        if self.agility == 20 :
             n = randint (1, 100)
             if 1 <= n <= 2:
+                self.attack = 0
+            
+        if self.agility == 25:
+            n = randint (1, 200)
+            if 1 <= n <= 5:
                 self.attack = 0
         
         if self.agility == 40 :
@@ -78,3 +89,14 @@ class Character:
         agility : {} \n"
         print(text.format(self.name, self.health, self.attack, self.defense, self.agility))
     
+    def player_run(self):
+        """method to allow the player to flee the fight with 
+        (low chance of succeeding) """
+        self.player_run = randint(1,100)
+        if  1<= self.player_run <=7 :
+            print("vous fuyez le combat ")
+            
+        else :
+            print("votre adversaire vous a rattrappé le combat continue")
+            
+         
