@@ -1,6 +1,15 @@
 from characters.character import Character
 
-character = Character(500, 50, 80, 10 , None)
-character.choose_class()
-character.player_name()
+from characters.archer import Archer
+
+from characters.warrior import Warrior
+
+from characters.magician import Magician
+
+if __name__ == "__main__":
+
+    character = Character(600, 20, 50, 25, None )
+    character.choose_class()
+    character.player_name()
+    character.__repr__()
 
