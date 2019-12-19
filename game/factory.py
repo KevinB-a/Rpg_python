@@ -6,6 +6,13 @@ from characters.warrior import Warrior
 
 from characters.magician import Magician
 
+from characters.orc import Orc
+
+from characters.wolf import Wolf
+
+from characters.zombie import Zombie
+
+import random
 class Factory():
     """ """
     def __init__(self):
@@ -24,5 +31,15 @@ class Factory():
             self.choice_class = Magician()
         else :
             self.choice_class = Archer()
-        
+    
 
+    def choose_enemy(self):
+        """method for randomly choosing an enemy """
+        self.ennemy=random.choice(["wolf", "zombie", "orc"])
+        if self.ennemy == "wolf":
+            self.ennemy = Wolf("Fally")
+        elif self.ennemy == "zombie":
+            self.ennemy = Zombie("Farid")
+        else :
+            self.ennemy = Orc("Sofiane")
+        
