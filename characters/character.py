@@ -2,7 +2,7 @@ import os
 
 from random import randint
 
-class Character:
+class Character():
     
     def __init__(self, health, attack, defense, agility, name):
         """arguments for initialize the Character class  """
@@ -28,57 +28,62 @@ class Character:
             self.name = input("veuillez entrez votre nom ou pseudo :")
         return self.name
 
-    def attacking(self):
-        """method to attacking """
-        if self.defense > self.attack :
-            self.defense = self.defense -self.attack
-        return self.defense
+    def attacking(self,opponent):
+        """method to attacking the opponent"""
+        if self.opponent.defense > self.attack :
+            self.opponent.defense -= self.attack
+        return self.opponent.defense
 
-        if self.defense < self.attack and self.defense > 0 :
-            self.attack -= self.defense
-            self.health -= self.attack
-            self.defense == 0
-        return self.health
+        if self.opponent.defense < self.attack and self.defense > 0 :
+            self.attack -= self.opponent.defense
+            self.opponent.health -= self.attack
+            self.opponent.defense == 0
+        return self.opponent.health
         
-        if self.defense == 0 :
-            self.health -= self.attack
-        return self.health 
+        if self.opponent.defense == 0 :
+            self.opponent.health -= self.attack
+        return self.opponent.health 
     
     def clear(self):
         """method to clear the terminal"""
         os.system('cls' if os.name =='nt' else 'clear')
 
-    def dodge(self):
+    def dodge(self,opponent):
         """methods to dodge in function of agility player """
         if self.agility == 5 :
             n = randint (1, 200)
             if n == 1:
-                self.attack = 0
+                self.opponent.attack = 0
         
         if self.agility == 10:
             n = randint (1, 100)
             if n == 1:
-                self.attack = 0
+                self.opponent.attack = 0
+        
         
         if self.agility == 20 :
             n = randint (1, 100)
             if 1 <= n <= 2:
-                self.attack = 0
+                self.opponent.attack = 0
+        
             
         if self.agility == 25:
             n = randint (1, 200)
             if 1 <= n <= 5:
-                self.attack = 0
+                self.opponent.attack = 0
+        
         
         if self.agility == 40 :
             n = randint (1, 100)
             if 1 <= n <= 4:
-                self.attack = 0
+                self.opponent.attack = 0
+        
         
         if  self.agility == 50:
             n = randint (1, 100)
             if 1 <= n <= 5:
-                self.attack = 0
+                self.opponent.attack = 0
+        
 
     def __repr__(self):
         """method to show employee informations"""
