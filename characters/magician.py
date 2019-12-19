@@ -1,7 +1,9 @@
-class Magician:
+from .character import Character
+
+class Magician(Character):
     """this class has a constructor init, a method call healing and a class attribute mana """
     mana = 200
-    def __init__(self, name = False):
+    def __init__(self):
         super().__init__(600,20,50,25)
     
     def healing(self):
