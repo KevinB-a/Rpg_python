@@ -74,10 +74,11 @@ class Arena():
         return self.opponent.health 
     """
     def fighters(self, player, opponent):
+        """method for create  """
         self.player = player
         self.opponent = opponent
     
-    def attacking(self, player, opponent):
+    """def attacking(self, player, opponent):
         self.fighters(player, opponent)
         if opponent.defense > 0:
             if opponent.defense < player.attack:
@@ -93,8 +94,34 @@ class Arena():
                     opponent.health = 0
             else:
                 opponent.health -= (player.attack - opponent.defense)
-            return(opponent.health)
-    
+            return(opponent.health)"""
+            
+    def player_attacking(self, player, opponent):
+        if opponent.health >0 :
+            if player.attack < opponent.defense:
+                hit=(player.attack/opponent.defense)*player.attack
+                opponent.health -=hit
+                print("l'adversaire possede encore ",opponent.health)
+            else :
+                opponent.health -= player.attack
+                print("l'adversaire possede encore ",opponent.health)
+
+        else :
+            opponent.health ==0 
+
+
+            
+    def opponent_attacking(self, opponent, player):
+        if player.health >0 :
+            if opponent.attack < player.defense:
+                hit=(opponent.attack/player.defense)*opponent.attack
+                player.health -=hit
+                print("le joueur possede encore ",player.health)
+            else :
+                player.health -= opponent.attack
+                print("le joueur possede encore ",player.health)
+        else :
+            player.health ==0 
 
     
     
