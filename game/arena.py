@@ -101,10 +101,10 @@ class Arena():
             if player.attack < opponent.defense:
                 hit=(player.attack/opponent.defense)*player.attack
                 opponent.health -=hit
-                print("l'adversaire possede encore ",opponent.health)
+                print("l'adversaire possede encore",opponent.health,"points de vie")
             else :
                 opponent.health -= player.attack
-                print("l'adversaire possede encore ",opponent.health)
+                print("l'adversaire possede encore",opponent.health,"points de vie")
 
         else :
             opponent.health ==0 
@@ -116,10 +116,10 @@ class Arena():
             if opponent.attack < player.defense:
                 hit=(opponent.attack/player.defense)*opponent.attack
                 player.health -=hit
-                print("le joueur possede encore ",player.health)
+                print("le joueur possede encore",player.health,"points de vie")
             else :
                 player.health -= opponent.attack
-                print("le joueur possede encore ",player.health)
+                print("le joueur possede encore",player.health,"points de vie")
         else :
             player.health ==0 
 
