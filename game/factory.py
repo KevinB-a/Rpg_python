@@ -17,7 +17,7 @@ class Factory():
     """ """
     def __init__(self):
         self.choice_class = None
-        self.ennemy = None
+        self.opponent = None
     
     def choose_class(self):
         """method to ask the user his class he wants play """
@@ -26,20 +26,25 @@ class Factory():
             print (" Veuillez entrer les bon elements")
             self.choice_class = input(" Veuillez choisir le type de personnage que vous souhaiter incarner :").lower()
         if self.choice_class == "warrior":
-            self.choice_class = Warrior()
+            warrior = Warrior()
+            return warrior
         elif self.choice_class == "magician":
-            self.choice_class = Magician()
+            magician = Magician()
+            return magician
         else :
-            self.choice_class = Archer()
-    
+            archer = Archer()
+            return archer
 
     def choose_enemy(self):
         """method for randomly choosing an enemy """
-        self.ennemy=random.choice(["wolf", "zombie", "orc"])
-        if self.ennemy == "wolf":
-            self.ennemy = Wolf("Fally")
-        elif self.ennemy == "zombie":
-            self.ennemy = Zombie("Farid")
+        self.opponent = random.choice(["wolf", "zombie", "orc"])
+        if self.opponent == "wolf":
+            wolf=Wolf("Fally")
+            return wolf   
+        elif self.opponent == "zombie":
+            zombie = Zombie("Farid")
+            return zombie 
         else :
-            self.ennemy = Orc("Sofiane")
-        
+            self.opponent == "orc"
+            orc = Orc("Sofiane")
+            return orc  

@@ -17,7 +17,7 @@ class Magician(Character):
             print("votre mana est trop basse pour utiliser le sort de soin")
 
         else :
-            print("vous vous soigniez mais votre vie est au maximum ")
+            print("vous vous soigniez mais votre health est au maximum ")
             Magician.mana -=50 
             self.health == self.health
             return self.health

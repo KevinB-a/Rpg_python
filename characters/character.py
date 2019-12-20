@@ -3,7 +3,7 @@ import os
 from random import randint
 
 class Character():
-    
+    """this class is mother class,  """
     def __init__(self, health, attack, defense, agility, name):
         """arguments for initialize the Character class  """
         self.health = health
@@ -12,7 +12,7 @@ class Character():
         self.agility = agility
         self.name = None
 
-    def player_name(self):
+    def character_name(self):
         """method to ask the user his name""" 
         while self.name == None :
             self.name = input("veuillez entrez votre nom ou pseudo :")
@@ -31,5 +31,5 @@ class Character():
         agility : {} \n"
         print(text.format(self.name, self.health, self.attack, self.defense, self.agility))
     
-            
+    
          

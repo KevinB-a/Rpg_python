@@ -6,21 +6,21 @@ class Arena():
     
     def __init__(self):
         factory = Factory()
-        self.player_run = 0
+        self.character_run = 0
         self.opponent = None 
     
-    def player_run(self):
-        """method to allow the player to flee the fight with 
+    def character_run(self):
+        """method to allow the character to flee the fight with 
         (low chance of succeeding) """
-        self.player_run = randint(1,100)
-        if  1<= self.player_run <=7 :
+        self.character_run = randint(1,100)
+        if  1<= self.character_run <=7 :
             print("vous fuyez le combat ")
             
         else :
             print("votre adversaire vous a rattrappé le combat continue")
     
     def dodge(self,opponent):
-        """methods to dodge in function of agility player """
+        """methods to dodge in function of agility character """
         if self.agility == 5 :
             n = randint (1, 200)
             if n == 1:
@@ -55,10 +55,10 @@ class Arena():
             if 1 <= n <= 5:
                 self.opponent.attack = 0
     
-    """def attacking(self, player, opponent):
+    """def attacking(self, character, opponent):
         method to attacking the opponent
         
-        self.fighters(player, opponent)
+        self.fighters(character, opponent)
         if self.opponent.defense > self.attack :
             self.opponent.defense -= self.attack
         return self.opponent.defense
@@ -73,11 +73,27 @@ class Arena():
             self.opponent.health -= self.attack
         return self.opponent.health 
     """
-    def fighters(self,player, opponent):
+    def fighters(self, player, opponent):
         self.player = player
         self.opponent = opponent
-        
-        
+    
+    def attacking(self, player, opponent):
+        self.fighters(player, opponent)
+        if opponent.defense > 0:
+            if opponent.defense < player.attack:
+                opponent.health -= (player.attack - opponent.defense)
+                opponent.defense = 0
+            else:
+                opponent.defense -= player.attack
+                print(opponent.defense)
+        else:
+            if opponent.defense == 0:
+                opponent.health -= player.attack
+                if opponent.health <= 0:
+                    opponent.health = 0
+            else:
+                opponent.health -= (player.attack - opponent.defense)
+            return(opponent.health)
     
 
     
