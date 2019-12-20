@@ -4,5 +4,5 @@ class Wolf(Character) :
     """this class inherit from Character we define his attributes  """
     def __init__(self,name) :
         """ """
-        super().__init__(400,40,70,20, None)
+        super().__init__(400,40,15,20, None)
     

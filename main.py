@@ -20,6 +20,6 @@ if __name__ == "__main__":
     opponent=factory.choose_enemy()
     opponent.__repr__()
     arena = Arena()
-    while player.health >0 and opponent.health >0 :
-        arena.attacking(player, opponent)
-        arena.attacking(opponent,player)
+    while player.health > 0 and opponent.health > 0 :
+        arena.player_attacking(player, opponent)
+        arena.opponent_attacking(opponent,player)
