@@ -21,5 +21,17 @@ if __name__ == "__main__":
     opponent.__repr__()
     arena = Arena()
     while player.health > 0 and opponent.health > 0 :
-        arena.player_attacking(player, opponent)
-        arena.opponent_attacking(opponent,player)
+        answer = input("quel action voulez vous effectuer attaquer ou fuir ? a pour attaquer f pour fuir")
+        if answer == "a":
+            arena.player_attacking(player, opponent)
+            arena.opponent_attacking(opponent,player)
+        if answer == "f":
+            if arena.character_run() == True :
+                break
+            else :
+                arena.opponent_attacking(opponent,player)
+                continue
+            
+            
+            
+             

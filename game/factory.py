@@ -14,7 +14,10 @@ from characters.zombie import Zombie
 
 import random
 class Factory():
-    """ """
+    """this class contains 2 methods
+    -choose_class()
+    -choose-ennemy()
+    """
     def __init__(self):
         self.choice_class = None
         self.opponent = None

@@ -3,8 +3,15 @@ from .factory import Factory
 from characters.character import Character
 
 class Arena():
+    """this class contains 5 methods
+       -character_run()
+       -dodge()
+       -fighters()
+       -player_attacking()
+       -opponent_attacking()"""
     
     def __init__(self):
+       """initialize arguments  """
         factory = Factory()
         self.character_run = 0
         self.opponent = None 
@@ -15,6 +22,7 @@ class Arena():
         self.character_run = randint(1,100)
         if  1<= self.character_run <=7 :
             print("vous fuyez le combat ")
+            return True
             
         else :
             print("votre adversaire vous a rattrappé le combat continue")
@@ -55,48 +63,15 @@ class Arena():
             if 1 <= n <= 5:
                 self.opponent.attack = 0
     
-    """def attacking(self, character, opponent):
-        method to attacking the opponent
-        
-        self.fighters(character, opponent)
-        if self.opponent.defense > self.attack :
-            self.opponent.defense -= self.attack
-        return self.opponent.defense
 
-        if self.opponent.defense < self.attack and self.defense > 0 :
-            self.attack -= self.opponent.defense
-            self.opponent.health -= self.attack
-            self.opponent.defense == 0
-        return self.opponent.health
-        
-        if self.opponent.defense == 0 :
-            self.opponent.health -= self.attack
-        return self.opponent.health 
-    """
     def fighters(self, player, opponent):
-        """method for create  """
+        """method for have two fighters """
         self.player = player
         self.opponent = opponent
     
-    """def attacking(self, player, opponent):
-        self.fighters(player, opponent)
-        if opponent.defense > 0:
-            if opponent.defense < player.attack:
-                opponent.health -= (player.attack - opponent.defense)
-                opponent.defense = 0
-            else:
-                opponent.defense -= player.attack
-                print(opponent.defense)
-        else:
-            if opponent.defense == 0:
-                opponent.health -= player.attack
-                if opponent.health <= 0:
-                    opponent.health = 0
-            else:
-                opponent.health -= (player.attack - opponent.defense)
-            return(opponent.health)"""
             
     def player_attacking(self, player, opponent):
+        """player attack method"""
         if opponent.health >0 :
             if player.attack < opponent.defense:
                 hit=(player.attack/opponent.defense)*player.attack
@@ -112,6 +87,7 @@ class Arena():
 
             
     def opponent_attacking(self, opponent, player):
+        """opponent attack method """
         if player.health >0 :
             if opponent.attack < player.defense:
                 hit=(opponent.attack/player.defense)*opponent.attack

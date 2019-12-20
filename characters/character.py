@@ -3,7 +3,12 @@ import os
 from random import randint
 
 class Character():
-    """this class is mother class,  """
+    """this class is mother class, have 2 methods and 1 special method
+    method : 
+    -character_name()
+    -clear()
+    special method :
+    __repr__()"""
     def __init__(self, health, attack, defense, agility, name):
         """arguments for initialize the Character class  """
         self.health = health
