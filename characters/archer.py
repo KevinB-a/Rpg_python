@@ -4,5 +4,5 @@ class Archer(Character) :
     """ """
     def __init__(self):
         """ """ 
-        super().__init__(350,30,80,50,None)
+        super().__init__(350,80,30,50,None)
     

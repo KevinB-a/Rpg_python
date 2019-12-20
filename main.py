@@ -12,12 +12,14 @@ from game.arena import Arena
 
 if __name__ == "__main__":
 
-    character = Warrior()
+    character = Archer()
     factory=Factory()
     player=factory.choose_class()
-    character.player_name()
-    character.__repr__()
+    player.character_name()
+    player.__repr__()
     opponent=factory.choose_enemy()
+    opponent.__repr__()
     arena = Arena()
-    arena.attacking(player, opponent)
-
+    while player.health >0 and opponent.health >0 :
+        arena.attacking(player, opponent)
+        arena.attacking(opponent,player)
