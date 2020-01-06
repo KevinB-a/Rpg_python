@@ -1,6 +1,8 @@
+from .character import Character
+
 class Archer(Character) :
     """ """
-    def __init__(self,350,40,30,90,name)
+    def __init__(self):
         """ """ 
-        super().__init__(health,attack,defense,agility,name)
+        super().__init__(350,80,30,50,None)
     
