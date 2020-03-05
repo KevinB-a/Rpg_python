@@ -40,3 +40,4 @@ fonctionnel. Vous pouvez par exemple rajouter les fonctionnalités suivantes :
 - Une console interactive pour les combats, autrement dit, le joueur peut choisir lui-même l'action à 
 exécuter (attaquer, se soigner...) et le combat ne se poursuit pas tant qu'il n'a pas choisi
 - Rajouter une méthode fuite qui offre aux personnages une faible chance de quitter le combat sans se battre
+-------------------------------------------------------------------------------------------------------------
